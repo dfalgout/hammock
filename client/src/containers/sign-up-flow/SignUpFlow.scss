@@ -1,0 +1,20 @@
+.sign-up-flow-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100vh;
+
+  .choose-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &.light {
+      background: #f9a825;
+    }
+
+    &.dark {
+      background: #ff8f00;
+    }
+  }
+}

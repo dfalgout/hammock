@@ -1,0 +1,30 @@
+stages:
+  - test
+  - build
+
+service_test_job:
+  image: "openjdk:8-jdk-stretch"
+  stage: test
+  script:
+    - cd service
+    - ./gradlew test
+  only:
+    refs:
+      - master
+    changes:
+      - service/**/*
+
+client_test_job:
+  image: "node:12-alpine3.11"
+  stage: test
+  before_script:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+  script:
+    - cd client
+    - yarn install
+    - yarn test
+  only:
+    refs:
+      - master
+    changes:
+      - client/**/*

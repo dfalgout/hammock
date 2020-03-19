@@ -1,0 +1,38 @@
+.menu-content {
+  justify-content: space-between;
+
+  .header-left-title-group {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-left: 16px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .top-bar-action-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .top-bar-user-menu {
+    min-width: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .header-avatar {
+      margin: 10px;
+      color: '#fff';
+      background-color: orange;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+FROM node:12-alpine3.11
+
+RUN apk add yarn
+
+WORKDIR /app
+ADD . .
+
+RUN yarn install
+EXPOSE 1234
+
+ENTRYPOINT [ "yarn", "start" ]

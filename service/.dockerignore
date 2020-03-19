@@ -1,0 +1,13 @@
+.settings
+.idea
+.gradle
+.project
+
+*Dockerfile
+
+service.iml
+gradlew.bat
+
+bin
+build
+data

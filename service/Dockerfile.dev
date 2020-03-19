@@ -1,0 +1,8 @@
+FROM openjdk:8-jdk-stretch
+
+WORKDIR /app
+ADD . .
+
+RUN ./gradlew build
+
+ENTRYPOINT ["./gradlew", "run", "--continuous"]
